@@ -263,52 +263,10 @@ export default function App() {
             </Select>
           </FormControl>)}
 
-          {/* Display the amount */}
+  
+        </Box>
+        {/* Display the amount */}
           {amount && (
-            <Box sx={{mt: 2 }}>
-              <h1 id="amount">Amount: {amount}</h1>
-            </Box>
-          )}
-        </Box>
-          <Box sx={{ width: 200, mt: 2}}>
-          {feeSelected && nationality && courseSelected ? (
-            <FormControl fullWidth>
-              <InputLabel id="course-select-label">Level</InputLabel>
-              <Select
-                id="level"
-                value={levelSelected}
-                label="Levels"
-                onChange={handleLevelChange}
-              >
-                {/* Check if 'ALL_COURSES​' is available in the selected nationality */}
-                {feeData[feeSelected][nationality]["ALL_COURSES"]["ALL_LEVEL"]
-                  ? // If 'ALL_COURSES​ exists, render levels (UG, PG, etc.)
-                    levels.map((item, index) => (
-                      <MenuItem key={index} value={item}>
-                        {item}
-                      </MenuItem>
-                    ))
-                  : // If 'ALL_COURSES​ doesn't exist, render available levels or courses
-                    Object.keys(
-                      feeData[feeSelected][nationality]["ALL_COURSES"]
-                    ).map((item, index) => (
-                      <MenuItem key={index} value={item}>
-                        {item}
-                      </MenuItem>
-                    ))}
-              </Select>
-            </FormControl>
-          ) : (<FormControl fullWidth>
-            <InputLabel id="nationality-select-label">Level</InputLabel>
-            <Select value="" label="Select Nationality">
-              <MenuItem value="null"></MenuItem>
-            </Select>
-          </FormControl>)}
-
- 
-        </Box>
-                 {/* Display the amount */}
-                 {amount && (
             <Box sx={{mt: 2 }}>
               <h1 id="amount">Amount: {amount}</h1>
             </Box>
