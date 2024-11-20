@@ -45,6 +45,7 @@
 @media (max-width: 600px) {
   .container {
     gap: 15px;
+    height: 100%;
     padding: 10px;
   }
 
