@@ -141,7 +141,6 @@ export default function App() {
     
       <Box className="container">
         <img id="image" src="https://plus.unsplash.com/premium_photo-1714348661832-a0d4960c601e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="college_pic"/>
-        
         <h1 id="title">COURSES AT TROPOSHERE UNIVERSITY</h1>
         <h3 id="formTitle">Application Form</h3>
         {/* Fee Selection */}
@@ -237,7 +236,7 @@ export default function App() {
                 label="Levels"
                 onChange={handleLevelChange}
               >
-                {/* Check if 'ALL_COURSES​' is available in the selected nationality */}
+                {/* Check if 'ALL_LEVEL​' is available in the selected nationality */}
                 {feeData[feeSelected][nationality]["ALL_COURSES"]["ALL_LEVEL"]
                   ? // If 'ALL_COURSES​ exists, render levels (UG, PG, etc.)
                     levels.map((item, index) => (
@@ -245,7 +244,7 @@ export default function App() {
                         {item}
                       </MenuItem>
                     ))
-                  : // If 'ALL_COURSES​ doesn't exist, render available levels or courses
+                  : // If 'ALL_LEVEL' doesn't exist, render available levels or courses
                     Object.keys(
                       feeData[feeSelected][nationality]["ALL_COURSES"]
                     ).map((item, index) => (
@@ -266,7 +265,7 @@ export default function App() {
         </Box>
         {/* Display the amount */}
           {amount && (
-            <Box sx={{mt: 2 }}>
+            <Box sx={{mt:2 }}>
               <h1 id="amount">Amount: {amount}</h1>
             </Box>
           )}
