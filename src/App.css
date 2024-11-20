@@ -40,6 +40,9 @@
   display: inline;
   margin: 0;
 }
+body {
+  overflow-y: scroll;
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
@@ -84,6 +87,9 @@
     font-size: 14px;
     padding: 5px;
   }
+  body {
+    overflow-y: scroll;
+  }
 }
 
 /* Tablet View (Optional) */
@@ -108,5 +114,8 @@
   #amount {
     font-size: 18px;
     padding: 10px;
+  }
+  body {
+    overflow-y: scroll;
   }
 }
