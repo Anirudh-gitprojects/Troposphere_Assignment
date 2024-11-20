@@ -153,6 +153,8 @@ export default function App() {
               label="Fee"
               onChange={handleFeeChange}
             >
+                           {/* Render fee types */}
+
               {Object.keys(feeData).map((item, index) => (
                 <MenuItem key={index} value={item}>
                   {item}
@@ -173,6 +175,8 @@ export default function App() {
                 label="Nationality"
                 onChange={handleNationalityChange}
               >
+                  
+              {/* Render nation */}
                 {Object.keys(feeData[feeSelected]).map((item, index) => (
                   <MenuItem key={index} value={item}>
                     {item}
@@ -180,8 +184,10 @@ export default function App() {
                 ))}
               </Select>
             </FormControl>
+
           ) : (
             <FormControl fullWidth>
+           {/* Conditionally render empty */}
               <InputLabel id="nationality-select-label">Nationality</InputLabel>
               <Select value="" label="Select Nationality">
                 <MenuItem value="null"></MenuItem>
@@ -214,6 +220,7 @@ export default function App() {
                 )}
               </Select>
             </FormControl>
+           {/* Conditionally render empty */}
           ) : (
             <FormControl fullWidth>
             <InputLabel id="nationality-select-label">Courses</InputLabel>
@@ -254,7 +261,10 @@ export default function App() {
                     ))}
               </Select>
             </FormControl>
-          ) : (<FormControl fullWidth>
+           
+          ) :
+         {/* Conditionally render empty */}
+           (<FormControl fullWidth>
             <InputLabel id="nationality-select-label">Level</InputLabel>
             <Select value="" label="Select Nationality">
               <MenuItem value="null"></MenuItem>
@@ -263,7 +273,7 @@ export default function App() {
 
   
         </Box>
-        {/* Display the amount */}
+        {/* Display the amount if it exists*/}
           {amount && (
             <Box sx={{mt:2 }}>
               <h1 id="amount">Amount: {amount}</h1>
